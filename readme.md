@@ -1,6 +1,6 @@
 # sklearn-porter-demo
 
-This project demonstrates generating `C` source code from a sklear model using `sklear-porter` on python 3.
+This project demonstrates generating `C` source code from a sklearn model using `sklearn-porter` on python 3.
 
 
 ## Usage
