@@ -26,7 +26,7 @@ porter = Porter(clf, language="c")
 output = porter.export(embed_data=True)
 
 print("Saving file")
-with open("main.c", "w") as f:
+with open("./src/main.c", "w") as f:
     f.write(output)
 
 print("Done")

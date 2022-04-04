@@ -2,35 +2,47 @@
 #include <stdio.h>
 #include <math.h>
 
-int predict(double features[4]) {
+int predict(float features[4]) {
 
     int classes[3];
-
+        
     if (features[3] <= 0.800000011920929) {
-        classes[0] = 11;
-        classes[1] = 0;
-        classes[2] = 0;
+        classes[0] = 25; 
+        classes[1] = 0; 
+        classes[2] = 0; 
     } else {
-        if (features[2] <= 4.8500001430511475) {
-            if (features[3] <= 1.6500000357627869) {
-                classes[0] = 0;
-                classes[1] = 12;
-                classes[2] = 0;
+        if (features[3] <= 1.6500000357627869) {
+            if (features[2] <= 5.0) {
+                classes[0] = 0; 
+                classes[1] = 22; 
+                classes[2] = 0; 
             } else {
-                if (features[1] <= 3.0) {
-                    classes[0] = 0;
-                    classes[1] = 0;
-                    classes[2] = 2;
+                if (features[0] <= 6.049999952316284) {
+                    classes[0] = 0; 
+                    classes[1] = 1; 
+                    classes[2] = 0; 
                 } else {
-                    classes[0] = 0;
-                    classes[1] = 1;
-                    classes[2] = 0;
+                    classes[0] = 0; 
+                    classes[1] = 0; 
+                    classes[2] = 3; 
                 }
             }
         } else {
-            classes[0] = 0;
-            classes[1] = 0;
-            classes[2] = 11;
+            if (features[2] <= 4.8500001430511475) {
+                if (features[1] <= 3.100000023841858) {
+                    classes[0] = 0; 
+                    classes[1] = 0; 
+                    classes[2] = 3; 
+                } else {
+                    classes[0] = 0; 
+                    classes[1] = 1; 
+                    classes[2] = 0; 
+                }
+            } else {
+                classes[0] = 0; 
+                classes[1] = 0; 
+                classes[2] = 20; 
+            }
         }
     }
 
@@ -51,7 +63,7 @@ int main(int argc, const char * argv[]) {
     }
 
     /* Prediction: */
-    printf("%d\n", predict(features));
+    printf("%d", predict(features));
     return 0;
 
 }
