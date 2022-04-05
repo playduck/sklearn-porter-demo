@@ -2,11 +2,11 @@
 #include <stdio.h>
 #include <math.h>
 
-int predict(float features[4]) {
+int predict(double features[4]) {
 
     int classes[3];
         
-    if (features[3] <= 0.800000011920929) {
+    if (features[2] <= 2.599999964237213) {
         classes[0] = 25; 
         classes[1] = 0; 
         classes[2] = 0; 
